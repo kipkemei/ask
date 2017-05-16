@@ -1,0 +1,76 @@
+{% load static %}
+{% load server_tags %}
+
+<div class="row visible-sm visible-xs">
+
+    <div class="col-xs-4">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle btn-xs" data-toggle="dropdown">
+                {% if topic %} {{ topic }} {% else %} View Posts {% endif %}
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="{% url 'planet' %}">Planet</a></li>
+                <li><a href="{% url 'tag-list' %}">All &raquo;</a></li>
+            </ul>
+        </div>
+    </div>
+
+        <div class="col-xs-4 text-center" style="margin-bottom:5px">
+        <a role="button" class="btn btn-warning btn-xs" href="{% url 'home' %}">
+            <i class="fa fa-star fa-1x"></i> Home
+        </a>
+
+    </div>
+
+    <div class="col-xs-4">
+        <div class="btn-group pull-right btn-xs">
+
+            {% if user.is_authenticated %}
+                <button type="button" class="btn btn-success dropdown-toggle btn-xs" data-toggle="dropdown">
+                    <i class="fa fa-user"></i> You
+                    <span class="badge">
+                        {% get_cuont COUNTS 'messages' %}
+                    </span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li>
+                        <a href="{% url 'topic-list' topic='myposts' %}"><i class="fa fa-comments"></i> My Posts</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'user-messages' %}"><i class="fa fa-envelope"></i> My Messages
+                         <span class="badge">2
+                             {% get_cuont COUNTS 'messages' %}
+                         </span> </a>
+
+                    <li>
+                        <a href="{% url 'topic-list' topic='bookmarks' %}"><i class="fa fa-book"></i> My Bookmarks</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="{% url 'new-post' %}"><i class="fa fa-plus"></i> New Post</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a>
+                    </li>
+                </ul>
+            {% else %}
+                <div>
+                    <a class="btn btn-primary active" role="button" href="{% url 'login' %}">
+                        <i class="fa fa-user fa-1x"></i> Log In
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="col-md-9 top text-center">
+    <h3>Welcome to AskComrade</h3>
+    <b><a href="{% url 'signup' %}">
+        <div><i class="fa fa-arrow-circle-up fa-1x"></i></div>
+        <div>Sign Up</div>
+    </a></b>
+</div>
+

@@ -1,0 +1,42 @@
+.logo {
+  margin: 0;
+  font-size: 2.2em;
+  font-weight: 200;
+  font-family: "Audiowide", cursive;
+  text-align: center;
+  text-shadow: 1px 1px 0 #333333;
+}
+
+.logo a:hover, .logo a:focus {
+  color: #92c35e;
+  text-decoration: none;
+}
+/* Authentication forms */
+.form-box form,
+.form-box .form-message {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-box form .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-box form .checkbox {
+  font-weight: normal;
+}
+
+.form-box form .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-box form .form-control:focus {
+  z-index: 2;
+}
