@@ -35,7 +35,7 @@ oauthlib==0.6.3
 olefile==0.44
 ordereddict==1.1
 packaging==16.8
-Pillow==4.0.0
+Pillow==6.2.0
 psycopg2==2.7.1
 Pygments==1.6
 pyparsing==2.2.0
