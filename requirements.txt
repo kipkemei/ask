@@ -13,7 +13,7 @@ django-allauth==0.31.0
 django-braces==1.11.0
 django-celery==3.2.1
 django-crispy-forms==1.6.1
-django-debug-toolbar==1.7
+django-debug-toolbar==1.11.1
 django-environ==0.4.2
 django-haystack==2.6.0
 django-recaptcha==1.2.1
