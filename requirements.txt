@@ -29,7 +29,7 @@ Jinja2==2.9.6
 kombu==3.0.37
 langdetect==1.0.5
 Markdown==2.4.1
-markdown2==2.3.3
+markdown2==2.4.0
 MarkupSafe==0.23
 oauthlib==0.6.3
 olefile==0.44
